@@ -1,6 +1,6 @@
 (ns brave-clojure.ch-3-test
   (:require [clojure.test :refer :all]
-            [brave-clojure.ch-3 :refer :all]))
+            [brave-clojure.ch-3-ex :refer :all]))
 
 (deftest add-hundred-test
   (testing "Check we can add 100 to a number"

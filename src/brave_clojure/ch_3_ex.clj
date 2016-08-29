@@ -1,4 +1,4 @@
-(ns brave-clojure.ch-3)
+(ns brave-clojure.ch-3-ex)
 
 ;2) Write a function that takes a number and adds 100 to it.
 (defn add-hundred 

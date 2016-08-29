@@ -1,6 +1,6 @@
 (ns brave-clojure.core
   (:gen-class)
-  (use brave-clojure.hobbit))
+  (use brave-clojure.ch-3-hobbit))
 
 (declare
   ; chapter 2 - basics
