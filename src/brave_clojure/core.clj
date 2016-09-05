@@ -100,3 +100,37 @@
     (do (println "true"))
     (do (println "false"))
   ))
+
+(def human-consumption [8.1 7.3 6.6 5.0])
+(def critter-consumption [0.0 0.2 0.3 1.1])
+(defn unify-diet-data
+  [human critter]
+  {:human   human
+   :critter critter})
+
+(map unify-diet-data human-consumption critter-consumption)
+
+; Use map to iterate over a set of functions and return result of all
+(def sum #(reduce + %))
+(def avg #(/ (sum %) (count %)))
+(defn stats
+  [numbers]
+  (map #(% numbers) [sum count avg]))
+
+(println (stats [3 4 10]))
+
+; Use map to get values associated with key in a map
+(def identities
+  [{:alias "Batman" :real "Bruce Wayne"}
+   {:alias "Spider-Man" :real "Peter Parker"}
+   {:alias "Santa" :real "Your mom"}
+   {:alias "Easter Bunny" :real "Your dad"}])
+
+(map :real identities)
+
+; Create an infinite lazy sequence function
+(defn even-numbers
+  ([] (even-numbers 0))
+  ([n] (cons n (lazy-seq (even-numbers (+ n 2))))))
+
+(println (take 10 (even-numbers))) 
